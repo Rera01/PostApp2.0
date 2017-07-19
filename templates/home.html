@@ -1,0 +1,58 @@
+<nav class="navbar bar-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle glyphicon glyphicon-align-justify menu-botn" ng-click="isNavCollapsed = !isNavCollapsed"></button>
+					<a href="#!/" class="logo">Posts 2.0</a>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="collapse navbar-collapse right" uib-collapse="!isNavCollapsed">
+					<ul class="nav navbar-nav">
+						<li><a href="#!"/>Home</a></li>
+						<li><a href="#!/">Create New</a></li>
+						<li ng-show="!logged"><a href="#!/login">Log In</a></li>
+						<li ng-show="logged"><a href="#!/dashboard">Account</a></li>
+						<li ng-show="logged"><a href="#!/logout">Log out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<div ng-init="readPosts()" ng-show="posts.length > 0" class="animated">
+		<div ng-repeat="post in posts">
+			<div class="row">
+				<div class="col-md-2 hidden-xs hidden-sm">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<img ng-src="imgs/{{post.picture}}" class="avatar">
+						</div>
+						<div class="panel-body">
+							<strong><a href="#" class="pink">{{post.username}}</a></strong>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-10">
+					<div class="panel panel-danger">
+						<div class="panel-heading">
+							<strong>{{post.title}}</strong>
+						</div>
+						<div class="panel-body">
+							{{post.body}}
+						</div>
+						<div class="panel-footer">
+							<p class="text-right visible-xs visible-sm">Created by <strong><a href="#" class="pink">{{post.username}}</a></strong></p>
+						</div>
+					</div>
+				</div>
+			</div>
+				
+			<hr style="border-top:1px solid #ebccd1">
+			
+		</div>
+	</div>
+</div>

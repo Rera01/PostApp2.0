@@ -1,0 +1,47 @@
+<nav class="navbar bar-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle glyphicon glyphicon-align-justify menu-botn" ng-click="isNavCollapsed = !isNavCollapsed"></button>
+					<a href="#!/" class="logo">Posts 2.0</a>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="collapse navbar-collapse right" uib-collapse="!isNavCollapsed">
+					<ul class="nav navbar-nav">
+						<li><a href="#!"/>Home</a></li>
+						<li><a href="#!/">Create New</a></li>
+						<li ng-show="!logged"><a href="#!/login">Log In</a></li>
+						<li ng-show="logged"><a href="#!/dashboard">Account</a></li>
+						<li ng-show="logged"><a href="#!/logout">Log out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="col-md-4 panel panel-default center-block">
+				<div class="panel-body">
+					<h1>Login</h1>
+					<hr>
+					<form>
+						<div class="form-group">
+							<input type="text" id="username" ng-model="username" placeholder="Username" class="form-control">
+						</div>
+						<div class="form-group">
+							<input type="password" id="password" ng-model="password" placeholder="Password" class="form-control">
+						</div>
+						<button type="submit" ng-click="login()" class="btn btn-default">Go</button>
+					</form>
+					<p class="login_span"><!-- <a href="#!/recover">Lost your password?</a> ||  --><a href="#!/register">Sign in?</a></p>
+				</div>
+			<h4>Try using<br><br> Username: rera01 <br> password: 12345</h4>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,45 @@
+<nav class="navbar bar-bg">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle glyphicon glyphicon-align-justify menu-botn" ng-click="isNavCollapsed = !isNavCollapsed"></button>
+					<a href="#!/" class="logo">Posts 2.0</a>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-6">
+				<div class="collapse navbar-collapse right" uib-collapse="!isNavCollapsed">
+					<ul class="nav navbar-nav">
+						<li><a href="#!"/>Home</a></li>
+						<li><a href="#!/">Create New</a></li>
+						<li ng-show="!logged"><a href="#!/login">Log In</a></li>
+						<li ng-show="!logged"><a href="#!/dashboard">Account</a></li>
+						<li ng-show="logged"><a href="#!/logout">Log out</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+
+<div class="container">
+	<h1>Welcome {{user}}</h1>
+	<div class="col-md-12 panel panel-default dashboard" ng-init="getPic()">
+		<div class="change_avatar">
+			<h4>Change Avatar</h4>
+			<div class="img_size vAlign_bottom">
+				<img class="vAlign_bottom" ng-src="imgs/{{picture}}">
+			</div>
+			<input class="vAlign_bottom" type="file" onchange="angular.element(this).scope().uploadImage()" ng-model="newPic" upload-img="files" id="files">
+		</div>
+		<hr>
+		<div>
+			<h4>Change Password</h4>
+			<input type="text" placeholder="New Password" ng-model="newPass">
+		</div>
+		<hr>
+		<button ng-click="saveChanges()">Save changes</button>
+		<button ng-click="deleteAccount()">Delete Account</button>
+		<button ng-click="logout()">Log Out</button>
+	</div>
+</div>

@@ -1,0 +1,76 @@
+.logo{
+	font-size: 50px;
+	color: white;
+}
+.menu-botn{
+	background-color: #b71a56;
+	margin-top: 15px;
+	color: #fff;
+}
+
+.bar-bg{
+	background-color: #f44286;
+}
+.bar-bg a{
+	margin-top: 15px;
+	color: white;
+	text-decoration: none;
+}
+.bar-bg a:visited{
+	background-color: #b73567 !important;
+}
+.navbar{
+	border-radius:0px !important;
+}
+#navbar a:hover{
+	background-color: #b73567 !important;
+}
+.animated{
+	opacity: 1;
+	max-height: auto;
+	overflow: hidden;
+	transition: all 2s;
+}
+.animated .ng-hide{
+	opacity: 0;
+	max-height: 0px !important;
+	display: block !important;
+}
+.avatar{
+	width: 135px;
+	height: 135px;
+}
+.col-md-10 .panel-body{
+	min-height: 145px;
+}
+.right{
+	float: right !important;
+}
+.pink{
+	color:#f44286;
+}
+.pink:hover{
+	color:#b73567;
+}
+.center-block{
+	float: none;
+}
+.login_span{
+	font-size: 11px;
+	padding-top: 15px;
+}
+.dashboard {
+	padding: 25px;
+}
+.change_avatar {
+	width: 100%;
+}
+.vAlign_bottom{
+	display: inline-block !important;
+	vertical-align: bottom;
+}
+.img_size{
+	width: 150px;
+	height: 150px;
+	overflow: hidden;
+}
